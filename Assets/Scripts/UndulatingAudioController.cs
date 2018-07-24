@@ -11,23 +11,23 @@ public class UndulatingAudioController : MonoBehaviour
     public RangeFloat echoRange = new RangeFloat(0.2f, 0.8f);
     public RangeFloat ampRange = new RangeFloat(0f, -10f);
 
-    private Hv_prototype03_AudioLib heavyScript;
+    private Hv_undulatingPlain_AudioLib heavyScript;
     private PlainManager plainManager;
 
     void Start()
     {
         plainManager = GameObject.Find("PlainManager").GetComponent<PlainManager>();
-        heavyScript = GetComponent<Hv_prototype03_AudioLib>();
+        heavyScript = GetComponent<Hv_undulatingPlain_AudioLib>();
     }
 
     public void SetBurst(float newBurst)
     {
-        heavyScript.SetFloatParameter(Hv_prototype03_AudioLib.Parameter.Burst, newBurst);
+        heavyScript.SetFloatParameter(Hv_undulatingPlain_AudioLib.Parameter.Burst, newBurst);
     }
 
     public void SetBuild(float newBuild)
     {
-        heavyScript.SetFloatParameter(Hv_prototype03_AudioLib.Parameter.Build, newBuild);
+        heavyScript.SetFloatParameter(Hv_undulatingPlain_AudioLib.Parameter.Build, newBuild);
     }
 
     private void Update()
