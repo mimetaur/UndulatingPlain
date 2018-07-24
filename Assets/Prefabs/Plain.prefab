@@ -109,5 +109,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 106d58d2c744443c4a97001901e0ff0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  metallicCycleTime: 10
-  iceCycleTime: 30

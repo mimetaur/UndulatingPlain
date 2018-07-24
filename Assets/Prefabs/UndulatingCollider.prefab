@@ -149,6 +149,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: 315b9cd5a5f504d7192d83831e4f53a0, type: 2}
+  cutoffRange:
+    lowBound: 500
+    highBound: 1200
+  resonanceRange:
+    lowBound: 1
+    highBound: 2.5
+  echoRange:
+    lowBound: 0.2
+    highBound: 0.8
+  ampRange:
+    lowBound: 0
+    highBound: -10
 --- !u!114 &114560753008821676
 MonoBehaviour:
   m_ObjectHideFlags: 1
