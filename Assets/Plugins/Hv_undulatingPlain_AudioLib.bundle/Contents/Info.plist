@@ -7,13 +7,13 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>Hv_prototype03_AudioLib</string>
+	<string>Hv_undulatingPlain_AudioLib</string>
 	<key>CFBundleIdentifier</key>
-	<string>enzn.Hv-prototype03-AudioLib</string>
+	<string>enzn.Hv-undulatingPlain-AudioLib</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>Hv_prototype03_AudioLib</string>
+	<string>Hv_undulatingPlain_AudioLib</string>
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
@@ -47,7 +47,7 @@
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>9E145</string>
+	<string>9E501</string>
 	<key>DTPlatformVersion</key>
 	<string>GM</string>
 	<key>DTSDKBuild</key>
@@ -55,8 +55,8 @@
 	<key>DTSDKName</key>
 	<string>macosx10.13</string>
 	<key>DTXcode</key>
-	<string>0930</string>
+	<string>0931</string>
 	<key>DTXcodeBuild</key>
-	<string>9E145</string>
+	<string>9E501</string>
 </dict>
 </plist>

@@ -40,21 +40,21 @@ using AOT;
 #if UNITY_EDITOR
 using UnityEditor;
 
-[CustomEditor(typeof(Hv_prototype03_AudioLib))]
-public class Hv_prototype03_Editor : Editor {
+[CustomEditor(typeof(Hv_undulatingPlain_AudioLib))]
+public class Hv_undulatingPlain_Editor : Editor {
 
-  [MenuItem("Heavy/prototype03")]
-  static void CreateHv_prototype03() {
+  [MenuItem("Heavy/undulatingPlain")]
+  static void CreateHv_undulatingPlain() {
     GameObject target = Selection.activeGameObject;
     if (target != null) {
-      target.AddComponent<Hv_prototype03_AudioLib>();
+      target.AddComponent<Hv_undulatingPlain_AudioLib>();
     }
   }
   
-  private Hv_prototype03_AudioLib _dsp;
+  private Hv_undulatingPlain_AudioLib _dsp;
 
   private void OnEnable() {
-    _dsp = target as Hv_prototype03_AudioLib;
+    _dsp = target as Hv_undulatingPlain_AudioLib;
   }
 
   public override void OnInspectorGUI() {
@@ -72,19 +72,19 @@ public class Hv_prototype03_Editor : Editor {
     
     // build
     GUILayout.BeginHorizontal();
-    float build = _dsp.GetFloatParameter(Hv_prototype03_AudioLib.Parameter.Build);
+    float build = _dsp.GetFloatParameter(Hv_undulatingPlain_AudioLib.Parameter.Build);
     float newBuild = EditorGUILayout.Slider("build", build, 0.0f, 127.0f);
     if (build != newBuild) {
-      _dsp.SetFloatParameter(Hv_prototype03_AudioLib.Parameter.Build, newBuild);
+      _dsp.SetFloatParameter(Hv_undulatingPlain_AudioLib.Parameter.Build, newBuild);
     }
     GUILayout.EndHorizontal();
     
     // burst
     GUILayout.BeginHorizontal();
-    float burst = _dsp.GetFloatParameter(Hv_prototype03_AudioLib.Parameter.Burst);
+    float burst = _dsp.GetFloatParameter(Hv_undulatingPlain_AudioLib.Parameter.Burst);
     float newBurst = EditorGUILayout.Slider("burst", burst, 0.0f, 127.0f);
     if (burst != newBurst) {
-      _dsp.SetFloatParameter(Hv_prototype03_AudioLib.Parameter.Burst, newBurst);
+      _dsp.SetFloatParameter(Hv_undulatingPlain_AudioLib.Parameter.Burst, newBurst);
     }
     GUILayout.EndHorizontal();
     EditorGUI.indentLevel--;
@@ -93,16 +93,16 @@ public class Hv_prototype03_Editor : Editor {
 #endif // UNITY_EDITOR
 
 [RequireComponent (typeof (AudioSource))]
-public class Hv_prototype03_AudioLib : MonoBehaviour {
+public class Hv_undulatingPlain_AudioLib : MonoBehaviour {
   
   // Parameters are used to send float messages into the patch context (thread-safe).
   // Example usage:
   /*
     void Start () {
-        Hv_prototype03_AudioLib script = GetComponent<Hv_prototype03_AudioLib>();
+        Hv_undulatingPlain_AudioLib script = GetComponent<Hv_undulatingPlain_AudioLib>();
         // Get and set a parameter
-        float build = script.GetFloatParameter(Hv_prototype03_AudioLib.Parameter.Build);
-        script.SetFloatParameter(Hv_prototype03_AudioLib.Parameter.Build, build + 0.1f);
+        float build = script.GetFloatParameter(Hv_undulatingPlain_AudioLib.Parameter.Build);
+        script.SetFloatParameter(Hv_undulatingPlain_AudioLib.Parameter.Build, build + 0.1f);
     }
   */
   public enum Parameter : uint {
@@ -114,12 +114,12 @@ public class Hv_prototype03_AudioLib : MonoBehaviour {
   // Example usage:
   /*
     void Start () {
-        Hv_prototype03_AudioLib script = GetComponent<Hv_prototype03_AudioLib>();
+        Hv_undulatingPlain_AudioLib script = GetComponent<Hv_undulatingPlain_AudioLib>();
         script.RegisterSendHook();
         script.FloatReceivedCallback += OnFloatMessage;
     }
 
-    void OnFloatMessage(Hv_prototype03_AudioLib.FloatMessage message) {
+    void OnFloatMessage(Hv_undulatingPlain_AudioLib.FloatMessage message) {
         Debug.Log(message.receiverName + ": " + message.value);
     }
   */
@@ -138,7 +138,7 @@ public class Hv_prototype03_AudioLib : MonoBehaviour {
   public float burst = 0.0f;
 
   // internal state
-  private Hv_prototype03_Context _context;
+  private Hv_undulatingPlain_Context _context;
 
   public bool IsInstantiated() {
     return (_context != null);
@@ -148,8 +148,8 @@ public class Hv_prototype03_AudioLib : MonoBehaviour {
     _context.RegisterSendHook();
   }
   
-  // see Hv_prototype03_AudioLib.Parameter for definitions
-  public float GetFloatParameter(Hv_prototype03_AudioLib.Parameter param) {
+  // see Hv_undulatingPlain_AudioLib.Parameter for definitions
+  public float GetFloatParameter(Hv_undulatingPlain_AudioLib.Parameter param) {
     switch (param) {
       case Parameter.Build: return build;
       case Parameter.Burst: return burst;
@@ -157,7 +157,7 @@ public class Hv_prototype03_AudioLib : MonoBehaviour {
     }
   }
 
-  public void SetFloatParameter(Hv_prototype03_AudioLib.Parameter param, float x) {
+  public void SetFloatParameter(Hv_undulatingPlain_AudioLib.Parameter param, float x) {
     switch (param) {
       case Parameter.Build: {
         x = Mathf.Clamp(x, 0.0f, 127.0f);
@@ -176,7 +176,7 @@ public class Hv_prototype03_AudioLib : MonoBehaviour {
   
   public void FillTableWithMonoAudioClip(string tableName, AudioClip clip) {
     if (clip.channels > 1) {
-      Debug.LogWarning("Hv_prototype03_AudioLib: Only loading first channel of '" +
+      Debug.LogWarning("Hv_undulatingPlain_AudioLib: Only loading first channel of '" +
           clip.name + "' into table '" +
           tableName + "'. Multi-channel files are not supported.");
     }
@@ -190,7 +190,7 @@ public class Hv_prototype03_AudioLib : MonoBehaviour {
   }
 
   private void Awake() {
-    _context = new Hv_prototype03_Context((double) AudioSettings.outputSampleRate);
+    _context = new Hv_undulatingPlain_Context((double) AudioSettings.outputSampleRate);
   }
   
   private void Start() {
@@ -201,7 +201,7 @@ public class Hv_prototype03_AudioLib : MonoBehaviour {
   private void Update() {
     // retreive sent messages
     if (_context.IsSendHookRegistered()) {
-      Hv_prototype03_AudioLib.FloatMessage tempMessage;
+      Hv_undulatingPlain_AudioLib.FloatMessage tempMessage;
       while ((tempMessage = _context.msgQueue.GetNextMessage()) != null) {
         FloatReceivedCallback(tempMessage);
       }
@@ -214,27 +214,27 @@ public class Hv_prototype03_AudioLib : MonoBehaviour {
   }
 }
 
-class Hv_prototype03_Context {
+class Hv_undulatingPlain_Context {
 
 #if UNITY_IOS && !UNITY_EDITOR
   private const string _dllName = "__Internal";
 #else
-  private const string _dllName = "Hv_prototype03_AudioLib";
+  private const string _dllName = "Hv_undulatingPlain_AudioLib";
 #endif
 
   // Thread-safe message queue
   public class SendMessageQueue {
     private readonly object _msgQueueSync = new object();
-    private readonly Queue<Hv_prototype03_AudioLib.FloatMessage> _msgQueue = new Queue<Hv_prototype03_AudioLib.FloatMessage>();
+    private readonly Queue<Hv_undulatingPlain_AudioLib.FloatMessage> _msgQueue = new Queue<Hv_undulatingPlain_AudioLib.FloatMessage>();
 
-    public Hv_prototype03_AudioLib.FloatMessage GetNextMessage() {
+    public Hv_undulatingPlain_AudioLib.FloatMessage GetNextMessage() {
       lock (_msgQueueSync) {
         return (_msgQueue.Count != 0) ? _msgQueue.Dequeue() : null;
       }
     }
 
     public void AddMessage(string receiverName, float value) {
-      Hv_prototype03_AudioLib.FloatMessage msg = new Hv_prototype03_AudioLib.FloatMessage(receiverName, value);
+      Hv_undulatingPlain_AudioLib.FloatMessage msg = new Hv_undulatingPlain_AudioLib.FloatMessage(receiverName, value);
       lock (_msgQueueSync) {
         _msgQueue.Enqueue(msg);
       }
@@ -247,7 +247,7 @@ class Hv_prototype03_Context {
   private SendHook _sendHook = null;
 
   [DllImport (_dllName)]
-  private static extern IntPtr hv_prototype03_new_with_options(double sampleRate, int poolKb, int inQueueKb, int outQueueKb);
+  private static extern IntPtr hv_undulatingPlain_new_with_options(double sampleRate, int poolKb, int inQueueKb, int outQueueKb);
 
   [DllImport (_dllName)]
   private static extern int hv_processInlineInterleaved(IntPtr ctx,
@@ -308,14 +308,14 @@ class Hv_prototype03_Context {
 
   private delegate void SendHook(IntPtr context, string sendName, uint sendHash, IntPtr message);
 
-  public Hv_prototype03_Context(double sampleRate, int poolKb=10, int inQueueKb=2, int outQueueKb=2) {
+  public Hv_undulatingPlain_Context(double sampleRate, int poolKb=10, int inQueueKb=2, int outQueueKb=2) {
     gch = GCHandle.Alloc(msgQueue);
-    _context = hv_prototype03_new_with_options(sampleRate, poolKb, inQueueKb, outQueueKb);
+    _context = hv_undulatingPlain_new_with_options(sampleRate, poolKb, inQueueKb, outQueueKb);
     hv_setPrintHook(_context, new PrintHook(OnPrint));
     hv_setUserData(_context, GCHandle.ToIntPtr(gch));
   }
 
-  ~Hv_prototype03_Context() {
+  ~Hv_undulatingPlain_Context() {
     hv_delete(_context);
     GC.KeepAlive(_context);
     GC.KeepAlive(_sendHook);

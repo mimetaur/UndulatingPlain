@@ -1,4 +1,4 @@
-#N canvas 159 23 1564 1395 10;
+#N canvas 316 23 1564 1107 10;
 #X declare -path heavylib;
 #X obj 50 16 declare -path heavylib;
 #X msg 1212 81 \; c_mystic_chord 0 36 42 34 40 43 50;
@@ -7,7 +7,7 @@
 #X obj 392 724 hv.filter lowpass 400 1, f 30;
 #X obj 750 725 hv.filter lowpass 400 1, f 39;
 #X obj 850 613 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0.889764 256;
+-262144 -1 -1 0 256;
 #X obj 850 665 + 400;
 #X obj 570 982 *~;
 #X obj 434 983 *~;
@@ -39,9 +39,9 @@
 #X obj 513 52 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 978 67 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 11300 1;
+-1 -1 0 1;
 #X obj 501 813 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 8900 1;
+-1 -1 0 1;
 #X obj 399 650 *~ 0.9;
 #X obj 765 649 *~ 0.9;
 #X obj 465 1075 dac~, f 9;
