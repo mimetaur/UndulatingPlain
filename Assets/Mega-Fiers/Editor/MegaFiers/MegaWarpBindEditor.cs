@@ -15,7 +15,7 @@ public class MegaWarpBindEditor : MegaModifierEditor
 	{
 		MegaWarpBind mod = (MegaWarpBind)target;
 
-#if !UNITY_5 && !UNITY_2017
+#if !UNITY_5 && !UNITY_2017 && !UNITY_2018 && !UNITY_2019 && !UNITY_2020
 		EditorGUIUtility.LookLikeControls();
 #endif
 		

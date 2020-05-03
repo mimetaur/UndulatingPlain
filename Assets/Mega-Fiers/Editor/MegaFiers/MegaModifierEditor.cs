@@ -280,7 +280,7 @@ public class MegaModifierEditor : Editor
 
 	void ArrowCap(int id, Vector3 pos, Quaternion rot, float size)
 	{
-#if UNITY_5_6 || UNITY_2017
+#if UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 		Handles.ArrowHandleCap(id, pos, rot, size, EventType.Repaint);
 #else
 		Handles.ArrowCap(id, pos, rot, size);

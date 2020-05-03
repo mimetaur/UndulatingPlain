@@ -73,7 +73,7 @@ public class MegaModifyObjectEditor : Editor
 			mod.UseThreading = EditorGUILayout.Toggle("Thread This Object", mod.UseThreading);
 		}
 
-#if !UNITY_5 && !UNITY_2017
+#if !UNITY_5 && !UNITY_2017 && !UNITY_2018 && !UNITY_2019 && !UNITY_2020
 		EditorGUIUtility.LookLikeControls();
 #endif
 

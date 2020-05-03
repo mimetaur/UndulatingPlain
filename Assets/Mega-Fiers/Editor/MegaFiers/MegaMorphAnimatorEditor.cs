@@ -64,6 +64,8 @@ public class MegaMorphAnimatorEditor : Editor
 			EditorGUILayout.EndHorizontal();
 		}
 
+		EditorGUILayout.EndVertical();
+
 		//if ( GUILayout.Button("Debug") )
 		//{
 		//	DisplayClipInfo();

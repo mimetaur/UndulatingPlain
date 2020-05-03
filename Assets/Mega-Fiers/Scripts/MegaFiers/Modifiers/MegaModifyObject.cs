@@ -107,6 +107,22 @@ public class MegaModifyObject : MegaModifiers
 		}
 	}
 
+	[ContextMenu("Mesh Changed")]
+	public void MeshHasBeenChanged()
+	{
+		cachedMesh = (Mesh)Mesh.Instantiate(FindMesh(gameObject, out sourceObj));
+		cachedMesh = FindMesh(gameObject, out sourceObj);
+		mesh = cachedMesh;
+		if ( mesh.vertexCount != 0 )
+			SetMeshData();
+
+		if ( recalcnorms )
+			RecalcNormals();
+
+		if ( recalcbounds )
+			mesh.RecalculateBounds();
+	}
+
 	public void GetMesh(bool force)
 	{
 		if ( mesh == null || cachedMesh == null || sverts.Length == 0 || mesh.vertexCount != sverts.Length || force )
@@ -273,7 +289,7 @@ public class MegaModifyObject : MegaModifiers
 			mesh.vertices = newmesh.vertices;
 			mesh.normals = newmesh.normals;
 			mesh.uv = newmesh.uv;
-#if UNITY_5_0 || UNITY_5_1 || UNITY_5 || UNITY_2017 || UNITY_2018
+#if UNITY_5_0 || UNITY_5_1 || UNITY_5 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 			mesh.uv2 = newmesh.uv2;
 			mesh.uv3 = newmesh.uv3;
 			mesh.uv4 = newmesh.uv4;

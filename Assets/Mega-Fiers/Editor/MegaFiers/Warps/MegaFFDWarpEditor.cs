@@ -32,7 +32,7 @@ public class MegaFFDWarpEditor : MegaWarpEditor
 	{
 		MegaFFDWarp mod = (MegaFFDWarp)target;
 
-#if !UNITY_5 && !UNITY_2017
+#if !UNITY_5 && !UNITY_2017 && !UNITY_2018 && !UNITY_2019 && !UNITY_2020
 		EditorGUIUtility.LookLikeControls();
 #endif
 		mod.KnotSize = EditorGUILayout.FloatField("Knot Size", mod.KnotSize);
@@ -80,7 +80,7 @@ public class MegaFFDWarpEditor : MegaWarpEditor
 
 	Vector3 CircleCap(int id, Vector3 pos, Quaternion rot, float size)
 	{
-#if UNITY_5_6 || UNITY_2017
+#if UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 		return Handles.FreeMoveHandle(pos, rot, size, Vector3.zero, Handles.CircleHandleCap);
 #else
 		return Handles.FreeMoveHandle(pos, rot, size, Vector3.zero, Handles.CircleCap);
@@ -277,7 +277,7 @@ public class MegaFFDWarpEditor : MegaWarpEditor
 		}
 	}
 
-#if UNITY_5_6 || UNITY_2017
+#if UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 	public static Vector3 PositionHandle(Vector3 position, Quaternion rotation, float size, float alpha)
 	{
 		float handlesize = HandleUtility.GetHandleSize(position) * size;

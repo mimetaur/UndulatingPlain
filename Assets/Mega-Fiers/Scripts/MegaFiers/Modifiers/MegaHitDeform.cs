@@ -59,7 +59,7 @@ public class MegaHitDeform : MegaModifier
 
 	void Deform(Collision collision)
 	{
-#if UNITY_5 || UNITY_2017
+#if UNITY_5 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 		float cf = Mathf.Min(maxForce, collision.relativeVelocity.sqrMagnitude / scaleforce);
 #else
 		float cf = Mathf.Min(maxForce, collision.impactForceSum.sqrMagnitude / scaleforce);

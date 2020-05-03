@@ -488,7 +488,7 @@ public class MegaHoseNew : MonoBehaviour
 		{
 			if ( custnode2.transform.position != endp2 )
 			{
-				endp1 = custnode2.transform.position;
+				endp2 = custnode2.transform.position;
 				updatemesh = true;
 			}
 
@@ -913,7 +913,7 @@ public class MegaHoseNew : MonoBehaviour
 			mesh.RecalculateNormals();
 		mesh.RecalculateBounds();
 
-#if UNITY_5_5 || UNITY_5_6 || UNITY_2017 || UNITY_2018
+#if UNITY_5_5 || UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 #else
 		if ( optimize )
 			mesh.Optimize();

@@ -23,7 +23,7 @@ public class MegaTracksEditor : Editor
 	{
 		MegaTracks mod = (MegaTracks)target;
 
-#if !UNITY_5 && !UNITY_2017
+#if !UNITY_5 && !UNITY_2017 && !UNITY_2018 && !UNITY_2019 &&  !UNITY_2020
 		EditorGUIUtility.LookLikeControls();
 #endif
 		//DrawDefaultInspector();
@@ -69,7 +69,7 @@ public class MegaTracksEditor : Editor
 		}
 	}
 
-#if UNITY_5_1 || UNITY_5_2 || UNITY_5_3 || UNITY_5_4 || UNITY_5_5 || UNITY_5_6 || UNITY_2017
+#if UNITY_5_1 || UNITY_5_2 || UNITY_5_3 || UNITY_5_4 || UNITY_5_5 || UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 	[DrawGizmo(GizmoType.NotInSelectionHierarchy | GizmoType.Pickable | GizmoType.InSelectionHierarchy)]
 #else
 	[DrawGizmo(GizmoType.NotSelected | GizmoType.Pickable | GizmoType.SelectedOrChild)]

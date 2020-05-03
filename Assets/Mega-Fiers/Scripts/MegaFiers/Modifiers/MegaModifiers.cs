@@ -595,7 +595,7 @@ public class MegaModifiers : MonoBehaviour
 	// auto bias of first task on num of waits
 	public void ModifyObjectMT()
 	{
-//#if UNITY_4 || UNITY_5 || UNITY_2017
+		//#if UNITY_4 || UNITY_5 || UNITY_2017 || UNITY_2018 || UNITY_2019
 #if UNITY_EDITOR
 		//if ( !Application.isPlaying && Selection.activeGameObject != gameObject )
 		//{
@@ -1250,7 +1250,7 @@ public class MegaModifiers : MonoBehaviour
 #if true	//UNITY_PS3
 	void Awake()
 	{
-#if UNITY_5_5 || UNITY_5_6 || UNITY_2017
+#if UNITY_5_5 || UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 #else
 		if ( Application.platform == RuntimePlatform.PS3 && !Application.isEditor )
 		{

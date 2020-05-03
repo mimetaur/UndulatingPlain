@@ -23,7 +23,7 @@ public class MegaShapeEditor : Editor
 	bool			showknots	= false;
 	bool			showlabels	= true;
 	float			ImportScale	= 1.0f;
-#if UNITY_5_5 || UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019
+#if UNITY_5_5 || UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 #else
 	bool hidewire = false;
 #endif
@@ -52,14 +52,14 @@ public class MegaShapeEditor : Editor
 	public int	maxUndo	= 20;
 	public List<MegaSplineUndo>	undoHistory = new List<MegaSplineUndo>();
 
-#if UNITY_2017_2 || UNITY_2017_3 || UNITY_2018 || UNITY_2019
+#if UNITY_2017_2 || UNITY_2017_3 || UNITY_2017_4 || UNITY_2018 || UNITY_2019 || UNITY_2020
 	Dictionary<int, string> myControls = new Dictionary<int, string>();
 	public static int cid = 0;
 #endif
 
 	void NewControlFrame()
 	{
-#if UNITY_2017_2 || UNITY_2017_3 || UNITY_2018 || UNITY_2019
+#if UNITY_2017_2 || UNITY_2017_3 || UNITY_2017_4 || UNITY_2018 || UNITY_2019 || UNITY_2020
 		myControls.Clear();
 		cid = 10661066;
 #else
@@ -68,7 +68,7 @@ public class MegaShapeEditor : Editor
 
 	void SetControlName(string name)
 	{
-#if UNITY_2017_2 || UNITY_2017_3 || UNITY_2018 || UNITY_2019
+#if UNITY_2017_2 || UNITY_2017_3 || UNITY_2017_4 || UNITY_2018 || UNITY_2019 || UNITY_2020
 		cid++;
 		if ( myControls == null )
 			myControls = new Dictionary<int, string>();
@@ -82,7 +82,7 @@ public class MegaShapeEditor : Editor
 
 	string GetControlName()
 	{
-#if UNITY_2017_2 || UNITY_2017_3 || UNITY_2018 || UNITY_2019
+#if UNITY_2017_2 || UNITY_2017_3 || UNITY_2017_4 || UNITY_2018 || UNITY_2019 || UNITY_2020
 		if ( myControls != null )
 		{
 			int hc = GUIUtility.hotControl;
@@ -430,7 +430,7 @@ public class MegaShapeEditor : Editor
 
 			showlabels = EditorGUILayout.Toggle("Labels", showlabels);
 
-#if UNITY_5_5 || UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019
+#if UNITY_5_5 || UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 #else
 			bool hidewire1 = EditorGUILayout.Toggle("Hide Wire", hidewire);
 
@@ -872,7 +872,7 @@ public class MegaShapeEditor : Editor
 
 	Vector3 CircleCap(int id, Vector3 pos, Quaternion rot, float size)
 	{
-#if UNITY_2017_2 || UNITY_2017_3 || UNITY_2018 || UNITY_2019
+#if UNITY_2017_2 || UNITY_2017_3 || UNITY_2017_4 || UNITY_2018 || UNITY_2019 || UNITY_2020
 		return Handles.FreeMoveHandle(cid, pos, rot, size, Vector3.zero, Handles.CircleHandleCap);
 #else
 #if UNITY_5_6 || UNITY_2017_1
@@ -885,7 +885,7 @@ public class MegaShapeEditor : Editor
 
 	Vector3 SphereCap(int id, Vector3 pos, Quaternion rot, float size)
 	{
-#if UNITY_2017_2 || UNITY_2017_3 || UNITY_2018 || UNITY_2019
+#if UNITY_2017_2 || UNITY_2017_3 || UNITY_2017_4 || UNITY_2018 || UNITY_2019 || UNITY_2020
 		return Handles.FreeMoveHandle(cid, pos, rot, size, Vector3.zero, Handles.SphereHandleCap);
 #else
 #if UNITY_5_6 || UNITY_2017_1
@@ -903,7 +903,7 @@ public class MegaShapeEditor : Editor
 		bool mouseup = false;
 		bool recalc = false;
 
-#if UNITY_2017 || UNITY_2018 || UNITY_2019
+#if UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 		if ( Event.current.type == EventType.MouseUp )
 #else
 		if ( Event.current.type == EventType.mouseUp )
@@ -918,7 +918,7 @@ public class MegaShapeEditor : Editor
 			dragging = false;
 		}
 
-#if UNITY_2017 || UNITY_2018 || UNITY_2019
+#if UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 		if ( Event.current.type == EventType.MouseDown )
 #else
 		if ( Event.current.type == EventType.mouseDown )
@@ -927,7 +927,7 @@ public class MegaShapeEditor : Editor
 
 		}
 
-#if UNITY_2017 || UNITY_2018 || UNITY_2019
+#if UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 		if ( Event.current.type == EventType.MouseDrag && Event.current.button == 0 )
 #else
 		if ( Event.current.type == EventType.mouseDrag && Event.current.button == 0 )
@@ -1408,7 +1408,7 @@ public class MegaShapeEditor : Editor
 		return pos;
 	}
 
-#if UNITY_2017_2 || UNITY_2017_3 || UNITY_2018 || UNITY_2019
+#if UNITY_2017_2 || UNITY_2017_3 || UNITY_2017_4 || UNITY_2018 || UNITY_2019 || UNITY_2020
 	public static Vector3 PositionHandle(Vector3 position, Quaternion rotation, float size, float alpha)
 	{
 		return Handles.PositionHandle(position, rotation);
@@ -1501,7 +1501,7 @@ public class MegaShapeEditor : Editor
 #endif
 #endif
 
-#if UNITY_5_1 || UNITY_5_2 || UNITY_5_3 || UNITY_5_4 || UNITY_5_5 || UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019
+#if UNITY_5_1 || UNITY_5_2 || UNITY_5_3 || UNITY_5_4 || UNITY_5_5 || UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 	[DrawGizmo(GizmoType.NotInSelectionHierarchy | GizmoType.Pickable | GizmoType.InSelectionHierarchy)]
 #else
 	[DrawGizmo(GizmoType.NotSelected | GizmoType.Pickable | GizmoType.SelectedOrChild)]
@@ -1930,7 +1930,11 @@ public class MegaShapeEditor : Editor
 
 			GameObject obj = Selection.activeGameObject;
 
+#if UNITY_2019 || UNITY_2018_3 || UNITY_2020
+			GameObject prefab = PrefabUtility.SaveAsPrefabAsset(Selection.activeGameObject, "Assets/MegaPrefabs/" + Selection.activeGameObject.name + ".prefab");
+#else
 			GameObject prefab = PrefabUtility.CreatePrefab("Assets/MegaPrefabs/" + Selection.activeGameObject.name + ".prefab", Selection.activeGameObject);
+#endif
 			MeshFilter mf = obj.GetComponent<MeshFilter>();
 
 			if ( mf )
@@ -1965,7 +1969,7 @@ public class MegaShapeEditor : Editor
 	{
 		Mesh clonemesh = new Mesh();
 		clonemesh.vertices = mesh.vertices;
-#if UNITY_5_0 || UNITY_5_1 || UNITY_5_2 || UNITY_5 || UNITY_2017 || UNITY_2018 || UNITY_2019
+#if UNITY_5_0 || UNITY_5_1 || UNITY_5_2 || UNITY_5 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 		clonemesh.uv2 = mesh.uv2;
 #else
 		clonemesh.uv1 = mesh.uv1;

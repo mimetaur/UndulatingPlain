@@ -14,7 +14,7 @@ public class MegaPageFlipEditor : MegaModifierEditor
 	{
 		MegaPageFlip mod = (MegaPageFlip)target;
 
-#if !UNITY_5 && !UNITY_2017
+#if !UNITY_5 && !UNITY_2017 && !UNITY_2018 && !UNITY_2019 && !UNITY_2020
 		EditorGUIUtility.LookLikeControls();
 #endif
 		mod.turn = EditorGUILayout.FloatField("Turn", mod.turn);

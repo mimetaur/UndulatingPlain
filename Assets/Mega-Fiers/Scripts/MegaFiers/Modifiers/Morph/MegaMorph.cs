@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+#if false
 public class MegaMorphBase : MegaModifier
 {
 	public List<MegaMorphChan>	chanBank = new List<MegaMorphChan>();
@@ -201,6 +202,7 @@ public class MegaMorphBase : MegaModifier
 		}
 	}
 }
+#endif
 
 public enum MegaMorphAnimType
 {

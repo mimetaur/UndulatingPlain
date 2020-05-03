@@ -34,7 +34,7 @@ public class MegaBezPatchEditor : Editor
 	{
 		MegaBezPatch mod = (MegaBezPatch)target;
 
-#if !UNITY_5 && !UNITY_2017
+#if !UNITY_5 && !UNITY_2017 && !UNITY_2018 && !UNITY_2019 && !UNITY_2020
 		EditorGUIUtility.LookLikeControls();
 #endif
 
@@ -278,7 +278,7 @@ public class MegaBezPatchEditor : Editor
 			else
 			{
 				Handles.color = Color.green;
-#if UNITY_5_6 || UNITY_2017
+#if UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 				mod.p11 = Handles.FreeMoveHandle(p11, rot, mod.handlesize, mod.snap, Handles.SphereHandleCap);
 				mod.p14 = Handles.FreeMoveHandle(p14, rot, mod.handlesize, mod.snap, Handles.SphereHandleCap);
 				mod.p41 = Handles.FreeMoveHandle(p41, rot, mod.handlesize, mod.snap, Handles.SphereHandleCap);

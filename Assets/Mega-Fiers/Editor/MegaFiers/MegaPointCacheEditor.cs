@@ -840,6 +840,7 @@ public class MegaPointCacheEditor : MegaModifierEditor
 		am.maxtime = EditorGUILayout.FloatField("Loop Time", am.maxtime);
 		am.animated = EditorGUILayout.Toggle("Animated", am.animated);
 		am.framedelay = EditorGUILayout.Toggle("Frame Delay", am.framedelay);
+		am.ignoreFirst = EditorGUILayout.Toggle("Ignore First Frame", am.ignoreFirst);
 		am.speed = EditorGUILayout.FloatField("Speed", am.speed);
 		am.LoopMode = (MegaRepeatMode)EditorGUILayout.EnumPopup("Loop Mode", am.LoopMode);
 		am.interpMethod = (MegaInterpMethod)EditorGUILayout.EnumPopup("Interp Method", am.interpMethod);

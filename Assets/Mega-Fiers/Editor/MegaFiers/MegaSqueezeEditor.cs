@@ -12,7 +12,7 @@ public class MegaSqueezeEditor : MegaModifierEditor
 	{
 		MegaSqueeze mod = (MegaSqueeze)target;
 
-#if !UNITY_5 && !UNITY_2017
+#if !UNITY_5 && !UNITY_2017 && !UNITY_2018 && !UNITY_2019 && !UNITY_2020
 		EditorGUIUtility.LookLikeControls();
 #endif
 		mod.axis = (MegaAxis)EditorGUILayout.EnumPopup("Axis", mod.axis);

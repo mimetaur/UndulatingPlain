@@ -9,7 +9,7 @@ public class MegaUVAdjustEditor : MegaModifierEditor
 	{
 		MegaUVAdjust mod = (MegaUVAdjust)target;
 
-#if !UNITY_5 && !UNITY_2017
+#if !UNITY_5 && !UNITY_2017 && !UNITY_2018 && !UNITY_2019 && !UNITY_2020
 		EditorGUIUtility.LookLikeControls();
 #endif
 		mod.animate = EditorGUILayout.Toggle("Animate", mod.animate);

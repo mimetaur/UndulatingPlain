@@ -11,7 +11,7 @@ public class MegaSimpleEditor : MegaModifierEditor
 	{
 		MegaSimpleMod mod = (MegaSimpleMod)target;
 
-#if !UNITY_5 && !UNITY_2017
+#if !UNITY_5 && !UNITY_2017 && !UNITY_2018 && !UNITY_2019 && !UNITY_2020
 		EditorGUIUtility.LookLikeControls();
 #endif
 		mod.a3 = EditorGUILayout.Vector3Field("A3", mod.a3);

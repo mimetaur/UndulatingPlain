@@ -5,7 +5,7 @@ public class MegaHandles
 {
 	public static void DotCap(int id, Vector3 pos, Quaternion rot, float size)
 	{
-#if UNITY_5_6 || UNITY_2017
+#if UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 		Handles.DotHandleCap(id, pos, rot, size, EventType.Repaint);
 #else
 		Handles.DotCap(id, pos, rot, size);
@@ -14,7 +14,7 @@ public class MegaHandles
 
 	public static void SphereCap(int id, Vector3 pos, Quaternion rot, float size)
 	{
-#if UNITY_5_6 || UNITY_2017
+#if UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 		Handles.SphereHandleCap(id, pos, rot, size, EventType.Repaint);
 #else
 		Handles.SphereCap(id, pos, rot, size);
@@ -23,7 +23,7 @@ public class MegaHandles
 
 	public static void ArrowCap(int id, Vector3 pos, Quaternion rot, float size)
 	{
-#if UNITY_5_6 || UNITY_2017
+#if UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 		Handles.ArrowHandleCap(id, pos, rot, size, EventType.Repaint);
 #else
 		Handles.ArrowCap(id, pos, rot, size);
@@ -43,7 +43,7 @@ public class MegaMatSelectEditor : MegaModifierEditor
 	{
 		MegaMatSelect mod = (MegaMatSelect)target;
 
-#if !UNITY_5 && !UNITY_2017
+#if !UNITY_5 && !UNITY_2017 && !UNITY_2018 && !UNITY_2019 && !UNITY_2020
 		EditorGUIUtility.LookLikeControls();
 #endif
 		mod.Label = EditorGUILayout.TextField("Label", mod.Label);

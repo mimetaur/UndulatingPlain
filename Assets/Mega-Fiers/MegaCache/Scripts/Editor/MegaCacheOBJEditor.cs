@@ -72,7 +72,7 @@ public class MegaCacheOBJEditor : Editor
 
 		serializedObject.Update();
 
-#if !UNITY_5 && !UNITY_2017
+#if !UNITY_5 && !UNITY_2017 && !UNITY_2018 && !UNITY_2019 && !UNITY_2020
 		EditorGUIUtility.LookLikeControls();
 #endif
 
@@ -277,7 +277,7 @@ public class MegaCacheOBJEditor : Editor
 				serializedObject.ApplyModifiedProperties();
 			else
 			{
-#if UNITY_5_3_OR_NEWER || UNITY_2017
+#if UNITY_5_3_OR_NEWER || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 				serializedObject.ApplyModifiedPropertiesWithoutUndo();
 #else
 				serializedObject.ApplyModifiedProperties();
@@ -292,7 +292,7 @@ public class MegaCacheOBJEditor : Editor
 		if ( HaveMaterial(name) )
 			return (Material)AssetDatabase.LoadAssetAtPath("Assets/MegaCache/" + name + ".mat", typeof(Material));
 
-#if UNITY_5_3 || UNITY_5_4 || UNITY_5_5 || UNITY_5_6 || UNITY_2017
+#if UNITY_5_3 || UNITY_5_4 || UNITY_5_5 || UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 		Material mat = new Material(Shader.Find("Standard"));
 #else
 		Material mat = new Material(Shader.Find(shader));
@@ -362,7 +362,7 @@ public class MegaCacheOBJEditor : Editor
 
 					case 2:
 						mats[i] = CreateMaterial(mtl.name, "Specular");
-#if UNITY_5_3 || UNITY_5_4 || UNITY_5_5 || UNITY_5_6 || UNITY_2017
+#if UNITY_5_3 || UNITY_5_4 || UNITY_5_5 || UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 						mats[i].SetColor("_SpecColor", mtl.Ks);
 #else
 						mats[i].SetColor("_SpecCol", mtl.Ks);
@@ -375,7 +375,7 @@ public class MegaCacheOBJEditor : Editor
 					case 7:
 					case 9:
 						mats[i] = CreateMaterial(mtl.name, "Transparent/Specular");
-#if UNITY_5_3 || UNITY_5_4 || UNITY_5_5 || UNITY_5_6 || UNITY_2017
+#if UNITY_5_3 || UNITY_5_4 || UNITY_5_5 || UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 						mats[i].SetColor("_SpecColor", mtl.Ks);
 #else
 						mats[i].SetColor("_SpecCol", mtl.Ks);
@@ -387,7 +387,7 @@ public class MegaCacheOBJEditor : Editor
 					case 5:
 					case 8:
 						mats[i] = CreateMaterial(mtl.name, "Reflection/Specular");
-#if UNITY_5_3 || UNITY_5_4 || UNITY_5_5 || UNITY_5_6 || UNITY_2017
+#if UNITY_5_3 || UNITY_5_4 || UNITY_5_5 || UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 						mats[i].SetColor("_SpecColor", mtl.Ks);
 #else
 						mats[i].SetColor("_SpecCol", mtl.Ks);

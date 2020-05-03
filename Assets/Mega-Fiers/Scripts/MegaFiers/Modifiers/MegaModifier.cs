@@ -81,7 +81,7 @@ public class MegaModifier : MonoBehaviour
 	public int startchannel = 0;
 	public int displaychans = 10;
 
-#if UNITY_4_3 || UNITY_4_5 || UNITY_4_6 || UNITY_5_0 || UNITY_5_1 || UNITY_5 || UNITY_2017
+#if UNITY_4_3 || UNITY_4_5 || UNITY_4_6 || UNITY_5_0 || UNITY_5_1 || UNITY_5 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 	public bool	useUndo = false;
 #else
 	public bool	useUndo = true;

@@ -119,7 +119,7 @@ public class MegaWrapRef : MonoBehaviour
 
 	static void CopyBlendShapes(Mesh mesh1, Mesh clonemesh)
 	{
-#if UNITY_5_3 || UNITY_5_4 || UNITY_5_5 || UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019
+#if UNITY_5_3 || UNITY_5_4 || UNITY_5_5 || UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 		int bcount = mesh1.blendShapeCount;	//GetBlendShapeFrameCount();
 
 		Vector3[] deltaverts = new Vector3[mesh1.vertexCount];
@@ -146,7 +146,7 @@ public class MegaWrapRef : MonoBehaviour
 	{
 		Mesh clonemesh = new Mesh();
 		clonemesh.vertices = m.vertices;
-#if UNITY_5_0 || UNITY_5_1 || UNITY_5 || UNITY_2017 || UNITY_2018 || UNITY_2019
+#if UNITY_5_0 || UNITY_5_1 || UNITY_5 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 		clonemesh.uv2 = m.uv2;
 		clonemesh.uv3 = m.uv3;
 		clonemesh.uv4 = m.uv4;

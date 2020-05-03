@@ -35,7 +35,7 @@ public class MegaHoseEditor : Editor
 	{
 		MegaHose mod = (MegaHose)target;
 
-#if !UNITY_5 && !UNITY_2017
+#if !UNITY_5 && !UNITY_2017 && !UNITY_2018 && !UNITY_2019 && !UNITY_2020
 		EditorGUIUtility.LookLikeControls();
 #endif
 
@@ -47,7 +47,7 @@ public class MegaHoseEditor : Editor
 		mod.capends = EditorGUILayout.Toggle("Cap Ends", mod.capends);
 		mod.calcnormals = EditorGUILayout.Toggle("Calc Normals", mod.calcnormals);
 		mod.calctangents = EditorGUILayout.Toggle("Calc Tangents", mod.calctangents);
-#if UNITY_5_5 || UNITY_5_6 || UNITY_2017
+#if UNITY_5_5 || UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 #else
 		mod.optimize = EditorGUILayout.Toggle("Optimize", mod.optimize);
 #endif
@@ -158,7 +158,7 @@ public class MegaHoseEditor : Editor
 	}
 #endif
 
-#if UNITY_5_1 || UNITY_5_2 || UNITY_5_3 || UNITY_5_4 || UNITY_5_5 || UNITY_5_6 || UNITY_2017
+#if UNITY_5_1 || UNITY_5_2 || UNITY_5_3 || UNITY_5_4 || UNITY_5_5 || UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 	[DrawGizmo(GizmoType.NotInSelectionHierarchy | GizmoType.Pickable | GizmoType.InSelectionHierarchy)]
 #else
 	[DrawGizmo(GizmoType.NotSelected | GizmoType.Pickable | GizmoType.SelectedOrChild)]

@@ -10,7 +10,7 @@ public class MegaTrainFollowEditor : Editor
 	{
 		MegaTrainFollow mod = (MegaTrainFollow)target;
 
-#if !UNITY_5 && !UNITY_2017
+#if !UNITY_5 && !UNITY_2017 && !UNITY_2018 && !UNITY_2019 && !UNITY_2020
 		EditorGUIUtility.LookLikeControls();
 #endif
 
@@ -80,7 +80,7 @@ public class MegaTrainFollowEditor : Editor
 		}
 	}
 
-#if UNITY_5_1 || UNITY_5_2 || UNITY_5_3 || UNITY_5_4 || UNITY_5_5 || UNITY_5_6 || UNITY_2017
+#if UNITY_5_1 || UNITY_5_2 || UNITY_5_3 || UNITY_5_4 || UNITY_5_5 || UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 	[DrawGizmo(GizmoType.NotInSelectionHierarchy | GizmoType.Pickable | GizmoType.InSelectionHierarchy)]
 #else
 	[DrawGizmo(GizmoType.NotSelected | GizmoType.Pickable | GizmoType.SelectedOrChild)]
@@ -100,7 +100,7 @@ public class MegaTrainFollowEditor : Editor
 				Handles.DrawLine(car.b1, car.b2);
 				//Gizmos.DrawSphere(car.b1, car.length * 0.025f);
 				//Gizmos.DrawSphere(car.b2, car.length * 0.025f);
-#if UNITY_5_6 || UNITY_2017
+#if UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 				Handles.SphereHandleCap(0, car.cp, Quaternion.identity, car.length * 0.025f, EventType.Layout);
 				Handles.SphereHandleCap(0, car.b1, Quaternion.identity, car.length * 0.025f, EventType.Layout);
 				Handles.SphereHandleCap(0, car.b2, Quaternion.identity, car.length * 0.025f, EventType.Layout);

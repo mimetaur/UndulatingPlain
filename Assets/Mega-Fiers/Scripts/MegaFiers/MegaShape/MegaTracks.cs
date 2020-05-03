@@ -181,7 +181,7 @@ public class MegaTracks : MonoBehaviour
 			}
 		}
 
-#if UNITY_5_4 || UNITY_5_5 || UNITY_5_6 || UNITY_2017
+#if UNITY_5_4 || UNITY_5_5 || UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 		Random.InitState(0);
 #else
 		Random.seed = 0;
@@ -231,7 +231,7 @@ public class MegaTracks : MonoBehaviour
 		Vector3 lrot = Vector3.zero;
 		Quaternion frot = Quaternion.identity;
 
-#if UNITY_5_4 || UNITY_5_5 || UNITY_5_6 || UNITY_2017
+#if UNITY_5_4 || UNITY_5_5 || UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 		Random.InitState(seed);
 #else
 		Random.seed = seed;

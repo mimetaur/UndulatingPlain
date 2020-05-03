@@ -12,7 +12,7 @@ public class MegaDisplaceEditor : MegaModifierEditor
 	{
 		MegaDisplace mod = (MegaDisplace)target;
 
-#if !UNITY_5 && !UNITY_2017
+#if !UNITY_5 && !UNITY_2017 && !UNITY_2018 && !UNITY_2019 && !UNITY_2020
 		EditorGUIUtility.LookLikeControls();
 #endif
 		mod.map = (Texture2D)EditorGUILayout.ObjectField("Map", mod.map, typeof(Texture2D), true);

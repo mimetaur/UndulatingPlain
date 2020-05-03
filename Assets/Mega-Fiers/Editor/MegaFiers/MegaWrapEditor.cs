@@ -271,7 +271,7 @@ public class MegaWrapEditor : Editor
 	{
 		MegaWrap mod = (MegaWrap)target;
 
-#if !UNITY_5 && !UNITY_2017 && !UNITY_2018
+#if !UNITY_5 && !UNITY_2017 && !UNITY_2018 && !UNITY_2019 && !UNITY_2020
 		EditorGUIUtility.LookLikeControls();
 #endif
 		mod.WrapEnabled = EditorGUILayout.Toggle("Enabled", mod.WrapEnabled);
@@ -321,7 +321,7 @@ public class MegaWrapEditor : Editor
 		mod.offset = EditorGUILayout.Vector3Field("Offset", mod.offset);
 
 		mod.NormalMethod = (MegaNormalMethod)EditorGUILayout.EnumPopup("Normal Method", mod.NormalMethod);
-#if UNITY_5 || UNITY_2017 || UNITY_2018
+#if UNITY_5 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 		mod.UseBakedMesh = EditorGUILayout.Toggle("Use Baked Mesh", mod.UseBakedMesh);
 #endif
 

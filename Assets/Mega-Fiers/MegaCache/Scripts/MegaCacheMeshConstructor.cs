@@ -275,7 +275,7 @@ public class MegaCacheMeshConstructorOBJ : MegaCacheMeshConstructor
 		if ( tangents )
 			BuildTangents(mesh);
 
-#if UNITY_5_5 || UNITY_2017 || UNITY_5_6 || UNITY_2018
+#if UNITY_5_5 || UNITY_2017 || UNITY_5_6 || UNITY_2018 || UNITY_2019 || UNITY_2020
 #else
 		if ( optimize )
 			mesh.Optimize();
@@ -385,7 +385,7 @@ public class MegaCacheMeshConstructorOBJNoUV : MegaCacheMeshConstructor
 		if ( tangents )
 			BuildTangents(mesh);
 
-#if UNITY_5_5 || UNITY_2017 || UNITY_5_6 || UNITY_2018
+#if UNITY_5_5 || UNITY_2017 || UNITY_5_6 || UNITY_2018 || UNITY_2019 || UNITY_2020
 #else
 		if ( optimize )
 				mesh.Optimize();

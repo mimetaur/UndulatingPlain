@@ -32,7 +32,7 @@ public class MegaCopyObjects : MonoBehaviour
 	{
 		Mesh clonemesh = new Mesh();
 		clonemesh.vertices = mesh.vertices;
-#if UNITY_5_0 || UNITY_5_1 || UNITY_5 || UNITY_2017 || UNITY_2018
+#if UNITY_5_0 || UNITY_5_1 || UNITY_5 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 		clonemesh.uv2 = mesh.uv2;
 		clonemesh.uv3 = mesh.uv3;
 		clonemesh.uv4 = mesh.uv4;
@@ -122,10 +122,15 @@ public class MegaCopyObjects : MonoBehaviour
 				}
 			}
 
+#if UNITY_2019 || UNITY_2018_3 || UNITY_2020
+			Object prefab = PrefabUtility.SaveAsPrefabAsset(newobj, "Assets/MegaPrefabs/" + newobj.name + "_Prefab.prefab");
+			DestroyImmediate(newobj);
+#else
 			Object prefab = PrefabUtility.CreateEmptyPrefab("Assets/MegaPrefabs/" + newobj.name + "_Prefab.prefab");
 			//EditorUtility.ReplacePrefab(newobj, prefab, ReplacePrefabOptions.ConnectToPrefab);
 			PrefabUtility.ReplacePrefab(newobj, prefab, ReplacePrefabOptions.ConnectToPrefab);
 			DestroyImmediate(newobj);
+#endif
 		}
 	}
 
@@ -255,10 +260,15 @@ public class MegaCopyObjects : MonoBehaviour
 				}
 			}
 
+#if UNITY_2019 || UNITY_2018_3 || UNITY_2020
+			Object prefab = PrefabUtility.SaveAsPrefabAsset(newobj, "Assets/MegaPrefabs/" + newobj.name + "_Prefab.prefab");
+			DestroyImmediate(newobj);
+#else
 			Object prefab = PrefabUtility.CreateEmptyPrefab("Assets/MegaPrefabs/" + newobj.name + "_Prefab.prefab");
 			//EditorUtility.ReplacePrefab(newobj, prefab, ReplacePrefabOptions.ConnectToPrefab);
 			PrefabUtility.ReplacePrefab(newobj, prefab, ReplacePrefabOptions.ConnectToPrefab);
 			DestroyImmediate(newobj, true);
+#endif
 		}
 	}
 }

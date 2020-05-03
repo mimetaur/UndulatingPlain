@@ -98,7 +98,7 @@ public class MegaCacheOBJ : MonoBehaviour
 	{
 		mf = GetComponent<MeshFilter>();
 
-#if UNITY_2017 || UNITY_2018
+#if UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 		if ( !Application.isEditor )
 #else
 		if ( !Application.isEditor && !Application.isWebPlayer )

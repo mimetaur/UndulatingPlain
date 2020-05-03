@@ -1,4 +1,4 @@
-﻿
+
 using UnityEngine;
 using UnityEditor;
 
@@ -61,5 +61,6 @@ public class MegaPointCacheAnimatorEditor : Editor
 
 			EditorGUILayout.EndHorizontal();
 		}
+		EditorGUILayout.EndVertical();
 	}
 }

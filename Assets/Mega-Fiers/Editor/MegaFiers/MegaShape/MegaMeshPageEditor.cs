@@ -33,7 +33,7 @@ public class MegaMeshPageEditor : Editor
 		MegaMeshPage mod = (MegaMeshPage)target;
 
 		//bool rebuild = DrawDefaultInspector();
-#if !UNITY_5 && !UNITY_2017
+#if !UNITY_5 && !UNITY_2017 && !UNITY_2018 && !UNITY_2019 && !UNITY_2020
 		EditorGUIUtility.LookLikeControls();
 #endif
 
@@ -48,7 +48,7 @@ public class MegaMeshPageEditor : Editor
 		mod.PivotBase = EditorGUILayout.Toggle("Pivot Base", mod.PivotBase);
 		mod.PivotEdge = EditorGUILayout.Toggle("Pivot Edge", mod.PivotEdge);
 		mod.tangents = EditorGUILayout.Toggle("Tangents", mod.tangents);
-#if UNITY_5_5 || UNITY_5_6 || UNITY_2017
+#if UNITY_5_5 || UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 #else
 		mod.optimize = EditorGUILayout.Toggle("Optimize", mod.optimize);
 #endif

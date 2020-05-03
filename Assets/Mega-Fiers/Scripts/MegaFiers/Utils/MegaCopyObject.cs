@@ -26,7 +26,7 @@ public class MegaCopyObject
 			Mesh mesh = mf.sharedMesh;
 			Mesh clonemesh = new Mesh();
 			clonemesh.vertices = mesh.vertices;
-#if UNITY_5_0 || UNITY_5_1 || UNITY_5 || UNITY_2017 || UNITY_2018 || UNITY_2019
+#if UNITY_5_0 || UNITY_5_1 || UNITY_5 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 			clonemesh.uv2 = mesh.uv2;
 			clonemesh.uv3 = mesh.uv3;
 			clonemesh.uv4 = mesh.uv4;
@@ -48,7 +48,7 @@ public class MegaCopyObject
 
 			//clonemesh.triangles = mesh.triangles;
 
-#if UNITY_5_3 || UNITY_5_4 || UNITY_5_5 || UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019
+#if UNITY_5_3 || UNITY_5_4 || UNITY_5_5 || UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 			CopyBlendShapes(mesh, clonemesh);
 #if false
 			int bcount = mesh.blendShapeCount;	//GetBlendShapeFrameCount();
@@ -92,7 +92,7 @@ public class MegaCopyObject
 
 	static void CopyBlendShapes(Mesh mesh, Mesh clonemesh)
 	{
-#if UNITY_5_3 || UNITY_5_4 || UNITY_5_5 || UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019
+#if UNITY_5_3 || UNITY_5_4 || UNITY_5_5 || UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 		int bcount = mesh.blendShapeCount;	//GetBlendShapeFrameCount();
 
 		Vector3[] deltaverts = new Vector3[mesh.vertexCount];
@@ -152,7 +152,7 @@ public class MegaCopyObject
 			Mesh clonemesh = new Mesh();
 
 			clonemesh.vertices = mod.verts;	//mesh.vertices;
-#if UNITY_5_0 || UNITY_5_1 || UNITY_5 || UNITY_2017 || UNITY_2018 || UNITY_2019
+#if UNITY_5_0 || UNITY_5_1 || UNITY_5 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 			clonemesh.uv2 = mesh.uv2;
 			clonemesh.uv3 = mesh.uv3;
 			clonemesh.uv4 = mesh.uv4;
@@ -193,7 +193,7 @@ public class MegaCopyObject
 			if ( newsmr && oldsmr )
 			{
 				newsmr.sharedMesh = clonemesh;
-#if UNITY_5_3 || UNITY_5_4 || UNITY_5_5 || UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019
+#if UNITY_5_3 || UNITY_5_4 || UNITY_5_5 || UNITY_5_6 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 				for ( int b = 0; b < mesh.blendShapeCount; b++ )
 				{
 					newsmr.SetBlendShapeWeight(b, oldsmr.GetBlendShapeWeight(b));
@@ -395,7 +395,7 @@ public class MegaCopyObject
 				Mesh mesh = skinmesh[i].sharedMesh;
 				Mesh clonemesh = new Mesh();
 				clonemesh.vertices = mesh.vertices;
-#if UNITY_5_0 || UNITY_5_1 || UNITY_5 || UNITY_2017 || UNITY_2018
+#if UNITY_5_0 || UNITY_5_1 || UNITY_5 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 				clonemesh.uv2 = mesh.uv2;
 				clonemesh.uv3 = mesh.uv3;
 				clonemesh.uv4 = mesh.uv4;
@@ -435,7 +435,7 @@ public class MegaCopyObject
 				Mesh mesh = mf.sharedMesh;
 				Mesh clonemesh = new Mesh();
 				clonemesh.vertices = mesh.vertices;
-#if UNITY_5_0 || UNITY_5_1 || UNITY_5 || UNITY_2017 || UNITY_2018
+#if UNITY_5_0 || UNITY_5_1 || UNITY_5 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 				clonemesh.uv2 = mesh.uv2;
 				clonemesh.uv3 = mesh.uv3;
 				clonemesh.uv4 = mesh.uv4;
@@ -507,7 +507,7 @@ public class MegaCopyObject
 	{
 		Mesh clonemesh = new Mesh();
 		clonemesh.vertices = mesh.vertices;
-#if UNITY_5_0 || UNITY_5_1 || UNITY_5 || UNITY_2017 || UNITY_2018
+#if UNITY_5_0 || UNITY_5_1 || UNITY_5 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 		clonemesh.uv2 = mesh.uv2;
 		clonemesh.uv3 = mesh.uv3;
 		clonemesh.uv4 = mesh.uv4;
@@ -538,7 +538,7 @@ public class MegaCopyObject
 	{
 		Mesh clonemesh = new Mesh();
 		clonemesh.vertices = mod.verts;	//mesh.vertices;
-#if UNITY_5_0 || UNITY_5_1 || UNITY_5 || UNITY_2017 || UNITY_2018
+#if UNITY_5_0 || UNITY_5_1 || UNITY_5 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 		clonemesh.uv2 = mesh.uv2;
 		clonemesh.uv3 = mesh.uv3;
 		clonemesh.uv4 = mesh.uv4;
@@ -570,7 +570,7 @@ public class MegaCopyObject
 	{
 		Mesh clonemesh = new Mesh();
 		clonemesh.vertices = mesh.vertices;
-#if UNITY_5_0 || UNITY_5_1 || UNITY_5 || UNITY_2017 || UNITY_2018
+#if UNITY_5_0 || UNITY_5_1 || UNITY_5 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
 		clonemesh.uv2 = mesh.uv2;
 		clonemesh.uv3 = mesh.uv3;
 		clonemesh.uv4 = mesh.uv4;

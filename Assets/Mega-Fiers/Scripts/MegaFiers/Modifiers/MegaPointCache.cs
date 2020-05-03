@@ -33,8 +33,9 @@ public class MegaPointCache : MegaModifier
 	public MegaRepeatMode	LoopMode	= MegaRepeatMode.PingPong;
 	public MegaInterpMethod	interpMethod = MegaInterpMethod.Linear;
 	public MegaPCVert[]		Verts;
-	public float			weight = 1.0f;
-	public bool				framedelay = true;
+	public float			weight		= 1.0f;
+	public bool				framedelay	= true;
+	public bool				ignoreFirst	= false;
 
 	public MegaBlendAnimMode	blendMode = MegaBlendAnimMode.Additive;	// local space
 
@@ -279,8 +280,11 @@ public class MegaPointCache : MegaModifier
 			}
 
 			alpha = t / maxtime;
-
-			float val = (float)(Verts[0].points.Length - 1) * alpha;
+			float val = 0.0f;
+			if ( ignoreFirst )
+				val = 1.0f + (float)(Verts[0].points.Length - 2) * alpha;
+			else
+				val = (float)(Verts[0].points.Length - 1) * alpha;
 
 			sindex = (int)val;
 			dalpha = val - sindex;
