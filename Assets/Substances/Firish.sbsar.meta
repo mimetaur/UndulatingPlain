@@ -16,9 +16,7 @@ ScriptedImporter:
     graphDescIndex: 0
     generateAllOutputs: 0
     generateMipMaps: 1
-    preset: " <sbspreset pkgurl=\"pkg://Firish\" label=\"\" >\n  <presetinput identifier=\"$outputsize\"
-      uid=\"189932614\" type=\"8\" value=\"9,9\" />\n  <presetinput identifier=\"$randomseed\"
-      uid=\"1545613844\" type=\"4\" value=\"6227\" />\n </sbspreset>\n"
+    preset: " <sbspreset pkgurl=\"pkg://Firish\" label=\"\" >\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
@@ -572,15 +570,7 @@ ScriptedImporter:
     graphDescIndex: 0
     generateAllOutputs: 0
     generateMipMaps: 1
-    preset: " <sbspreset pkgurl=\"pkg://Firish\" label=\"\" >\n  <presetinput identifier=\"$outputsize\"
-      uid=\"189932614\" type=\"8\" value=\"9,9\" />\n  <presetinput identifier=\"fiber_vs_fractal\"
-      uid=\"2146623626\" type=\"0\" value=\"0.7\" />\n  <presetinput identifier=\"fiber_scale\"
-      uid=\"2146623654\" type=\"4\" value=\"2\" />\n  <presetinput identifier=\"ice_vs_fire\"
-      uid=\"2146566496\" type=\"0\" value=\"0\" />\n  <presetinput identifier=\"diffuseLightness\"
-      uid=\"2146566179\" type=\"0\" value=\"0.55\" />\n  <presetinput identifier=\"overallRoughness\"
-      uid=\"2146582460\" type=\"0\" value=\"0.8\" />\n  <presetinput identifier=\"overallMetallicness\"
-      uid=\"2146582485\" type=\"0\" value=\"0.708\" />\n  <presetinput identifier=\"fractalBrightness\"
-      uid=\"2146581097\" type=\"0\" value=\"0.6\" />\n </sbspreset>\n"
+    preset: " <sbspreset pkgurl=\"pkg://Firish\" label=\"\" >\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
@@ -1134,16 +1124,7 @@ ScriptedImporter:
     graphDescIndex: 0
     generateAllOutputs: 0
     generateMipMaps: 1
-    preset: " <sbspreset pkgurl=\"pkg://Firish\" label=\"\" >\n  <presetinput identifier=\"$outputsize\"
-      uid=\"189932614\" type=\"8\" value=\"9,9\" />\n  <presetinput identifier=\"$randomseed\"
-      uid=\"1545613844\" type=\"4\" value=\"7327\" />\n  <presetinput identifier=\"fiber_vs_fractal\"
-      uid=\"2146623626\" type=\"0\" value=\"0.72\" />\n  <presetinput identifier=\"fiber_scale\"
-      uid=\"2146623654\" type=\"4\" value=\"2\" />\n  <presetinput identifier=\"ice_vs_fire\"
-      uid=\"2146566496\" type=\"0\" value=\"0\" />\n  <presetinput identifier=\"diffuseLightness\"
-      uid=\"2146566179\" type=\"0\" value=\"0.55\" />\n  <presetinput identifier=\"overallRoughness\"
-      uid=\"2146582460\" type=\"0\" value=\"0.8\" />\n  <presetinput identifier=\"overallMetallicness\"
-      uid=\"2146582485\" type=\"0\" value=\"0.708\" />\n  <presetinput identifier=\"fractalBrightness\"
-      uid=\"2146581097\" type=\"0\" value=\"0.6\" />\n </sbspreset>\n"
+    preset: " <sbspreset pkgurl=\"pkg://Firish\" label=\"\" >\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
@@ -1158,7 +1139,7 @@ ScriptedImporter:
       - name: _BaseColorMap
         texture: {fileID: 7735760799427955910, guid: 19a27871b858d4dab87a90f5b47d1b46,
           type: 3}
-        scale: {x: 1, y: 1}
+        scale: {x: 2, y: 2}
         offset: {x: 0, y: 0}
       - name: _BentNormalMap
         texture: {instanceID: 0}
@@ -1300,7 +1281,7 @@ ScriptedImporter:
       - name: _DistortionBlurBlendMode
         float: 0
       - name: _DistortionBlurDstBlend
-        float: 0
+        float: 1
       - name: _DistortionBlurRemapMax
         float: 1
       - name: _DistortionBlurRemapMin
@@ -1308,17 +1289,17 @@ ScriptedImporter:
       - name: _DistortionBlurScale
         float: 1
       - name: _DistortionBlurSrcBlend
-        float: 0
+        float: 1
       - name: _DistortionDepthTest
         float: 1
       - name: _DistortionDstBlend
-        float: 0
+        float: 1
       - name: _DistortionEnable
         float: 0
       - name: _DistortionScale
         float: 1
       - name: _DistortionSrcBlend
-        float: 0
+        float: 1
       - name: _DistortionVectorBias
         float: -1
       - name: _DistortionVectorScale
@@ -1364,7 +1345,7 @@ ScriptedImporter:
       - name: _HeightTessCenter
         float: 0.5
       - name: _InvTilingScale
-        float: 1
+        float: 0.5
       - name: _Ior
         float: 1
       - name: _IridescenceMask
@@ -1414,23 +1395,23 @@ ScriptedImporter:
       - name: _StencilRef
         float: 0
       - name: _StencilRefDepth
-        float: 0
+        float: 8
       - name: _StencilRefDistortionVec
-        float: 2
+        float: 4
       - name: _StencilRefGBuffer
-        float: 2
+        float: 10
       - name: _StencilRefMV
-        float: 32
+        float: 40
       - name: _StencilWriteMask
-        float: 3
+        float: 6
       - name: _StencilWriteMaskDepth
         float: 8
       - name: _StencilWriteMaskDistortionVec
-        float: 2
+        float: 4
       - name: _StencilWriteMaskGBuffer
-        float: 3
+        float: 14
       - name: _StencilWriteMaskMV
-        float: 32
+        float: 40
       - name: _SubsurfaceMask
         float: 1
       - name: _SupportDecals
@@ -1486,11 +1467,11 @@ ScriptedImporter:
       - name: _UseShadowThreshold
         float: 0
       - name: _ZTestDepthEqualForOpaque
-        float: 4
+        float: 3
       - name: _ZTestGBuffer
         float: 4
       - name: _ZTestModeDistortion
-        float: 8
+        float: 4
       - name: _ZTestTransparent
         float: 4
       - name: _ZWrite
@@ -1672,19 +1653,11 @@ ScriptedImporter:
     - label: Default
       bOverride: 0
       bLockRatio: 1
-      textureWidth: 512
-      textureHeight: 512
+      textureWidth: 4096
+      textureHeight: 4096
       textureFormatMode: 0
       normalCompressed: 0
       bGenerateOnLoad: 1
-    - label: Default
-      bOverride: 0
-      bLockRatio: 1
-      textureWidth: 512
-      textureHeight: 512
-      textureFormatMode: 0
-      normalCompressed: 0
-      bGenerateOnLoad: 0
     material: {fileID: 7428538260717656302, guid: 19a27871b858d4dab87a90f5b47d1b46,
       type: 3}
     generatedTextures:
@@ -1697,15 +1670,7 @@ ScriptedImporter:
     graphDescIndex: 0
     generateAllOutputs: 0
     generateMipMaps: 1
-    preset: " <sbspreset pkgurl=\"pkg://Firish\" label=\"\" >\n  <presetinput identifier=\"$outputsize\"
-      uid=\"189932614\" type=\"8\" value=\"9,9\" />\n  <presetinput identifier=\"$randomseed\"
-      uid=\"1545613844\" type=\"4\" value=\"2284\" />\n  <presetinput identifier=\"fiber_vs_fractal\"
-      uid=\"2146623626\" type=\"0\" value=\"0.7\" />\n  <presetinput identifier=\"ice_vs_fire\"
-      uid=\"2146566496\" type=\"0\" value=\"0\" />\n  <presetinput identifier=\"diffuseLightness\"
-      uid=\"2146566179\" type=\"0\" value=\"0.55\" />\n  <presetinput identifier=\"overallRoughness\"
-      uid=\"2146582460\" type=\"0\" value=\"0.8\" />\n  <presetinput identifier=\"overallMetallicness\"
-      uid=\"2146582485\" type=\"0\" value=\"0.708\" />\n  <presetinput identifier=\"fractalBrightness\"
-      uid=\"2146581097\" type=\"0\" value=\"0.6\" />\n </sbspreset>\n"
+    preset: " <sbspreset pkgurl=\"pkg://Firish\" label=\"\" >\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
@@ -2259,15 +2224,7 @@ ScriptedImporter:
     graphDescIndex: 0
     generateAllOutputs: 0
     generateMipMaps: 1
-    preset: " <sbspreset pkgurl=\"pkg://Firish\" label=\"\" >\n  <presetinput identifier=\"$outputsize\"
-      uid=\"189932614\" type=\"8\" value=\"9,9\" />\n  <presetinput identifier=\"$randomseed\"
-      uid=\"1545613844\" type=\"4\" value=\"6254\" />\n  <presetinput identifier=\"fiber_vs_fractal\"
-      uid=\"2146623626\" type=\"0\" value=\"0.7\" />\n  <presetinput identifier=\"ice_vs_fire\"
-      uid=\"2146566496\" type=\"0\" value=\"0\" />\n  <presetinput identifier=\"diffuseLightness\"
-      uid=\"2146566179\" type=\"0\" value=\"0.55\" />\n  <presetinput identifier=\"overallRoughness\"
-      uid=\"2146582460\" type=\"0\" value=\"0.8\" />\n  <presetinput identifier=\"overallMetallicness\"
-      uid=\"2146582485\" type=\"0\" value=\"0.708\" />\n  <presetinput identifier=\"fractalBrightness\"
-      uid=\"2146581097\" type=\"0\" value=\"0.6\" />\n </sbspreset>\n"
+    preset: " <sbspreset pkgurl=\"pkg://Firish\" label=\"\" >\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
@@ -2821,11 +2778,7 @@ ScriptedImporter:
     graphDescIndex: 0
     generateAllOutputs: 0
     generateMipMaps: 1
-    preset: " <sbspreset pkgurl=\"pkg://Firish\" label=\"\" >\n  <presetinput identifier=\"$outputsize\"
-      uid=\"189932614\" type=\"8\" value=\"9,9\" />\n  <presetinput identifier=\"fiber_scale\"
-      uid=\"2146623654\" type=\"4\" value=\"5\" />\n  <presetinput identifier=\"diffuseLightness\"
-      uid=\"2146566179\" type=\"0\" value=\"0.55\" />\n  <presetinput identifier=\"overallRoughness\"
-      uid=\"2146582460\" type=\"0\" value=\"0.8\" />\n </sbspreset>\n"
+    preset: " <sbspreset pkgurl=\"pkg://Firish\" label=\"\" >\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
@@ -2982,7 +2935,7 @@ ScriptedImporter:
       - name: _DistortionBlurBlendMode
         float: 0
       - name: _DistortionBlurDstBlend
-        float: 0
+        float: 1
       - name: _DistortionBlurRemapMax
         float: 1
       - name: _DistortionBlurRemapMin
@@ -2990,17 +2943,17 @@ ScriptedImporter:
       - name: _DistortionBlurScale
         float: 1
       - name: _DistortionBlurSrcBlend
-        float: 0
+        float: 1
       - name: _DistortionDepthTest
         float: 1
       - name: _DistortionDstBlend
-        float: 0
+        float: 1
       - name: _DistortionEnable
         float: 0
       - name: _DistortionScale
         float: 1
       - name: _DistortionSrcBlend
-        float: 0
+        float: 1
       - name: _DistortionVectorBias
         float: -1
       - name: _DistortionVectorScale
@@ -3096,23 +3049,23 @@ ScriptedImporter:
       - name: _StencilRef
         float: 0
       - name: _StencilRefDepth
-        float: 0
+        float: 8
       - name: _StencilRefDistortionVec
-        float: 2
+        float: 4
       - name: _StencilRefGBuffer
-        float: 2
+        float: 10
       - name: _StencilRefMV
-        float: 32
+        float: 40
       - name: _StencilWriteMask
-        float: 3
+        float: 6
       - name: _StencilWriteMaskDepth
         float: 8
       - name: _StencilWriteMaskDistortionVec
-        float: 2
+        float: 4
       - name: _StencilWriteMaskGBuffer
-        float: 3
+        float: 14
       - name: _StencilWriteMaskMV
-        float: 32
+        float: 40
       - name: _SubsurfaceMask
         float: 1
       - name: _SupportDecals
@@ -3168,11 +3121,11 @@ ScriptedImporter:
       - name: _UseShadowThreshold
         float: 0
       - name: _ZTestDepthEqualForOpaque
-        float: 4
+        float: 3
       - name: _ZTestGBuffer
         float: 4
       - name: _ZTestModeDistortion
-        float: 8
+        float: 4
       - name: _ZTestTransparent
         float: 4
       - name: _ZWrite
@@ -3379,14 +3332,7 @@ ScriptedImporter:
     graphDescIndex: 0
     generateAllOutputs: 0
     generateMipMaps: 1
-    preset: " <sbspreset pkgurl=\"pkg://Firish\" label=\"\" >\n  <presetinput identifier=\"$outputsize\"
-      uid=\"189932614\" type=\"8\" value=\"9,9\" />\n  <presetinput identifier=\"fiber_vs_fractal\"
-      uid=\"2146623626\" type=\"0\" value=\"0.7\" />\n  <presetinput identifier=\"ice_vs_fire\"
-      uid=\"2146566496\" type=\"0\" value=\"0\" />\n  <presetinput identifier=\"diffuseLightness\"
-      uid=\"2146566179\" type=\"0\" value=\"0.55\" />\n  <presetinput identifier=\"overallRoughness\"
-      uid=\"2146582460\" type=\"0\" value=\"0.8\" />\n  <presetinput identifier=\"overallMetallicness\"
-      uid=\"2146582485\" type=\"0\" value=\"0.708\" />\n  <presetinput identifier=\"fractalBrightness\"
-      uid=\"2146581097\" type=\"0\" value=\"0.6\" />\n </sbspreset>\n"
+    preset: " <sbspreset pkgurl=\"pkg://Firish\" label=\"\" >\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
@@ -3401,7 +3347,7 @@ ScriptedImporter:
       - name: _BaseColorMap
         texture: {fileID: -6757393850396552996, guid: 19a27871b858d4dab87a90f5b47d1b46,
           type: 3}
-        scale: {x: 1, y: 1}
+        scale: {x: 4, y: 4}
         offset: {x: 0, y: 0}
       - name: _BentNormalMap
         texture: {instanceID: 0}
@@ -3543,7 +3489,7 @@ ScriptedImporter:
       - name: _DistortionBlurBlendMode
         float: 0
       - name: _DistortionBlurDstBlend
-        float: 0
+        float: 1
       - name: _DistortionBlurRemapMax
         float: 1
       - name: _DistortionBlurRemapMin
@@ -3551,17 +3497,17 @@ ScriptedImporter:
       - name: _DistortionBlurScale
         float: 1
       - name: _DistortionBlurSrcBlend
-        float: 0
+        float: 1
       - name: _DistortionDepthTest
         float: 1
       - name: _DistortionDstBlend
-        float: 0
+        float: 1
       - name: _DistortionEnable
         float: 0
       - name: _DistortionScale
         float: 1
       - name: _DistortionSrcBlend
-        float: 0
+        float: 1
       - name: _DistortionVectorBias
         float: -1
       - name: _DistortionVectorScale
@@ -3607,7 +3553,7 @@ ScriptedImporter:
       - name: _HeightTessCenter
         float: 0.5
       - name: _InvTilingScale
-        float: 1
+        float: 0.25
       - name: _Ior
         float: 1
       - name: _IridescenceMask
@@ -3657,23 +3603,23 @@ ScriptedImporter:
       - name: _StencilRef
         float: 0
       - name: _StencilRefDepth
-        float: 0
+        float: 8
       - name: _StencilRefDistortionVec
-        float: 2
+        float: 4
       - name: _StencilRefGBuffer
-        float: 2
+        float: 10
       - name: _StencilRefMV
-        float: 32
+        float: 40
       - name: _StencilWriteMask
-        float: 3
+        float: 6
       - name: _StencilWriteMaskDepth
         float: 8
       - name: _StencilWriteMaskDistortionVec
-        float: 2
+        float: 4
       - name: _StencilWriteMaskGBuffer
-        float: 3
+        float: 14
       - name: _StencilWriteMaskMV
-        float: 32
+        float: 40
       - name: _SubsurfaceMask
         float: 1
       - name: _SupportDecals
@@ -3729,11 +3675,11 @@ ScriptedImporter:
       - name: _UseShadowThreshold
         float: 0
       - name: _ZTestDepthEqualForOpaque
-        float: 4
+        float: 3
       - name: _ZTestGBuffer
         float: 4
       - name: _ZTestModeDistortion
-        float: 8
+        float: 4
       - name: _ZTestTransparent
         float: 4
       - name: _ZWrite
@@ -3915,19 +3861,11 @@ ScriptedImporter:
     - label: Default
       bOverride: 0
       bLockRatio: 1
-      textureWidth: 512
-      textureHeight: 512
+      textureWidth: 4096
+      textureHeight: 4096
       textureFormatMode: 0
       normalCompressed: 0
       bGenerateOnLoad: 1
-    - label: Default
-      bOverride: 0
-      bLockRatio: 1
-      textureWidth: 512
-      textureHeight: 512
-      textureFormatMode: 0
-      normalCompressed: 0
-      bGenerateOnLoad: 0
     material: {fileID: -8610025728737568754, guid: 19a27871b858d4dab87a90f5b47d1b46,
       type: 3}
     generatedTextures:
