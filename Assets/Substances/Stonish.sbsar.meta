@@ -1,208 +1,248 @@
 fileFormatVersion: 2
 guid: d5ff25ea264964fb8bac4f6ba74c6a21
-timeCreated: 1524341160
-licenseType: Pro
-SubstanceImporter:
+ScriptedImporter:
+  internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 5
-  materialInstances:
-  - serializedVersion: 16
-    name: Stonish
-    prototypeName: Stonish
-    shaderName: 
-    shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderKeywords: _METALLICGLOSSMAP _NORMALMAP _PARALLAXMAP
-    renderQueue: -1
-    lightmapFlags: 4
-    inputs:
-    - name: $outputsize
-      value:
-        scalar[0]: 8
-        scalar[1]: 8
-        scalar[2]: 0
-        scalar[3]: 0
-        texture: {instanceID: 0}
-        stringvalue: 
-    - name: $pixelsize
-      value:
-        scalar[0]: 1
-        scalar[1]: 1
-        scalar[2]: 0
-        scalar[3]: 0
-        texture: {instanceID: 0}
-        stringvalue: 
-    - name: $randomseed
-      value:
-        scalar[0]: 0
-        scalar[1]: 0
-        scalar[2]: 0
-        scalar[3]: 0
-        texture: {instanceID: 0}
-        stringvalue: 
-    - name: fractalGrungeMix
-      value:
-        scalar[0]: 0.597
-        scalar[1]: 0
-        scalar[2]: 0
-        scalar[3]: 0
-        texture: {instanceID: 0}
-        stringvalue: 
-    - name: twoGrungeMult
-      value:
-        scalar[0]: 0.618
-        scalar[1]: 0
-        scalar[2]: 0
-        scalar[3]: 0
-        texture: {instanceID: 0}
-        stringvalue: 
-    - name: stoneTextureHeightAmount
-      value:
-        scalar[0]: 0.337
-        scalar[1]: 0
-        scalar[2]: 0
-        scalar[3]: 0
-        texture: {instanceID: 0}
-        stringvalue: 
-    - name: overallRoughness
-      value:
-        scalar[0]: 0.5
-        scalar[1]: 0
-        scalar[2]: 0
-        scalar[3]: 0
-        texture: {instanceID: 0}
-        stringvalue: 
-    - name: overallMetalness
-      value:
-        scalar[0]: 0.223
-        scalar[1]: 0
-        scalar[2]: 0
-        scalar[3]: 0
-        texture: {instanceID: 0}
-        stringvalue: 
-    - name: stoneBaseColorTone
-      value:
-        scalar[0]: 0.719
-        scalar[1]: 0
-        scalar[2]: 0
-        scalar[3]: 0
-        texture: {instanceID: 0}
-        stringvalue: 
-    materialInformation:
-      serializedVersion: 5
-      offset: {x: 0, y: 0}
-      scale: {x: 8, y: 8}
-      generateMipmaps: 1
-      generateAllOutputs: 0
-      animationUpdateRate: 0
-    materialProperties:
-      serializedVersion: 3
-      texEnvs:
-      - _BumpMap:
-          texture: {instanceID: 0}
-          scale: {x: 8, y: 8}
-          offset: {x: 0, y: 0}
-      - _DetailAlbedoMap:
-          texture: {instanceID: 0}
-          scale: {x: 1, y: 1}
-          offset: {x: 0, y: 0}
-      - _DetailMask:
-          texture: {instanceID: 0}
-          scale: {x: 1, y: 1}
-          offset: {x: 0, y: 0}
-      - _DetailNormalMap:
-          texture: {instanceID: 0}
-          scale: {x: 1, y: 1}
-          offset: {x: 0, y: 0}
-      - _EmissionMap:
-          texture: {instanceID: 0}
-          scale: {x: 8, y: 8}
-          offset: {x: 0, y: 0}
-      - _MainTex:
-          texture: {instanceID: 0}
-          scale: {x: 8, y: 8}
-          offset: {x: 0, y: 0}
-      - _MetallicGlossMap:
-          texture: {instanceID: 0}
-          scale: {x: 8, y: 8}
-          offset: {x: 0, y: 0}
-      - _OcclusionMap:
-          texture: {instanceID: 0}
-          scale: {x: 8, y: 8}
-          offset: {x: 0, y: 0}
-      - _ParallaxMap:
-          texture: {instanceID: 0}
-          scale: {x: 8, y: 8}
-          offset: {x: 0, y: 0}
-      floats:
-      - _BumpScale: 1
-      - _Cutoff: 0.5
-      - _DetailNormalMapScale: 1
-      - _DstBlend: 0
-      - _GlossMapScale: 1
-      - _Glossiness: 0.5
-      - _GlossyReflections: 1
-      - _Metallic: 0
-      - _Mode: 0
-      - _OcclusionStrength: 1
-      - _Parallax: 0.02
-      - _SmoothnessTextureChannel: 0
-      - _SpecularHighlights: 1
-      - _SrcBlend: 1
-      - _UVSec: 0
-      - _ZWrite: 1
-      colors:
-      - _Color: {r: 1, g: 1, b: 1, a: 1}
-      - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    textureParameters:
-    - name: Stonish_basecolor
-      alphaSource: 6
-      filterMode: 1
-      aniso: 1
-      wrapMode: 0
-    - name: Stonish_normal
-      alphaSource: 0
-      filterMode: 1
-      aniso: 1
-      wrapMode: 0
-    - name: Stonish_metallic
-      alphaSource: 7
-      filterMode: 1
-      aniso: 1
-      wrapMode: 0
-    - name: Stonish_height
-      alphaSource: 0
-      filterMode: 1
-      aniso: 1
-      wrapMode: 0
-    - name: Stonish_ambientOcclusion
-      alphaSource: 0
-      filterMode: 1
-      aniso: 1
-      wrapMode: 0
-    textureAssignments:
-    - shaderProp: _MainTex
-      material: {instanceID: 0}
-      baseUID: 2639892115
-    - shaderProp: _BumpMap
-      material: {instanceID: 0}
-      baseUID: 2639892113
-    - shaderProp: _MetallicGlossMap
-      material: {instanceID: 0}
-      baseUID: 2639892117
-    - shaderProp: _OcclusionMap
-      material: {instanceID: 0}
-      baseUID: 2608732222
-    - shaderProp: _ParallaxMap
-      material: {instanceID: 0}
-      baseUID: 2570495076
-    buildTargetSettings:
-    - serializedVersion: 2
-      buildTarget: 
-      textureWidth: 1024
-      textureHeight: 1024
-      textureFormat: 0
-      loadingBehavior: 4
-  deletedPrototypes: []
+  serializedVersion: 2
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+  script: {fileID: 232528478, guid: 43a8bbf65be290d44ba52b94476242b9, type: 3}
+  version: 24
+  projectContext: 0
+  mGraphInstanceData:
+  - graphLabel: Stonish
+    prototypeName: Stonish
+    graphDescIndex: 0
+    generateAllOutputs: 0
+    generateMipMaps: 1
+    preset: " <sbspreset pkgurl=\"pkg://Stonish\" label=\"\" >\n  <presetinput identifier=\"$outputsize\"
+      uid=\"4024371362\" type=\"8\" value=\"9,9\" />\n  <presetinput identifier=\"fractalGrungeMix\"
+      uid=\"2608846758\" type=\"0\" value=\"0.597\" />\n  <presetinput identifier=\"twoGrungeMult\"
+      uid=\"2608846779\" type=\"0\" value=\"0.618\" />\n  <presetinput identifier=\"stoneTextureHeightAmount\"
+      uid=\"2608846565\" type=\"0\" value=\"0.337\" />\n  <presetinput identifier=\"overallMetalness\"
+      uid=\"2608847196\" type=\"0\" value=\"0.223\" />\n  <presetinput identifier=\"stoneBaseColorTone\"
+      uid=\"2608732354\" type=\"0\" value=\"0.719\" />\n </sbspreset>\n"
+    shaderName: Standard
+    materialProperties:
+      shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+      shaderKeywords: _MAINTEX _METALLICGLOSSMAP _NORMALMAP _OCCLUSIONMAP _PARALLAXMAP
+      lightmapFlags: 4
+      texEnvs:
+      - name: _BumpMap
+        texture: {fileID: 1261465745171507268, guid: d5ff25ea264964fb8bac4f6ba74c6a21,
+          type: 3}
+        scale: {x: 8, y: 8}
+        offset: {x: 0, y: 0}
+      - name: _DetailAlbedoMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _DetailMask
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _DetailNormalMap
+        texture: {instanceID: 0}
+        scale: {x: 1, y: 1}
+        offset: {x: 0, y: 0}
+      - name: _EmissionMap
+        texture: {instanceID: 0}
+        scale: {x: 8, y: 8}
+        offset: {x: 0, y: 0}
+      - name: _MainTex
+        texture: {fileID: -2851718534202841992, guid: d5ff25ea264964fb8bac4f6ba74c6a21,
+          type: 3}
+        scale: {x: 8, y: 8}
+        offset: {x: 0, y: 0}
+      - name: _MetallicGlossMap
+        texture: {fileID: 6675541185633892891, guid: d5ff25ea264964fb8bac4f6ba74c6a21,
+          type: 3}
+        scale: {x: 8, y: 8}
+        offset: {x: 0, y: 0}
+      - name: _OcclusionMap
+        texture: {fileID: -6275554753608997612, guid: d5ff25ea264964fb8bac4f6ba74c6a21,
+          type: 3}
+        scale: {x: 8, y: 8}
+        offset: {x: 0, y: 0}
+      - name: _ParallaxMap
+        texture: {fileID: 7966747799422688767, guid: d5ff25ea264964fb8bac4f6ba74c6a21,
+          type: 3}
+        scale: {x: 8, y: 8}
+        offset: {x: 0, y: 0}
+      floats:
+      - name: _BumpScale
+        float: 1
+      - name: _Cutoff
+        float: 0.5
+      - name: _DetailNormalMapScale
+        float: 1
+      - name: _DstBlend
+        float: 0
+      - name: _GlossMapScale
+        float: 1
+      - name: _Glossiness
+        float: 0.5
+      - name: _GlossyReflections
+        float: 1
+      - name: _Metallic
+        float: 0
+      - name: _Mode
+        float: 0
+      - name: _OcclusionStrength
+        float: 1
+      - name: _Parallax
+        float: 0.02
+      - name: _SmoothnessTextureChannel
+        float: 0
+      - name: _SpecularHighlights
+        float: 1
+      - name: _SrcBlend
+        float: 1
+      - name: _UVSec
+        float: 0
+      - name: _ZWrite
+        float: 1
+      colors:
+      - name: _Color
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - name: _EmissionColor
+        color: {r: 0, g: 0, b: 0, a: 1}
+    outputDescList:
+    - outputName: baseColor
+      identifier: basecolor
+      usageName: baseColor
+      channelStr: baseColor
+      label: Base Color
+      usage: 1
+      bImage: 1
+      bNumerical: 0
+      bLinear: 0
+    - outputName: normal
+      identifier: normal
+      usageName: normal
+      channelStr: normal
+      label: Normal
+      usage: 7
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    - outputName: roughness
+      identifier: roughness
+      usageName: roughness
+      channelStr: roughness
+      label: Roughness
+      usage: 15
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    - outputName: metallic
+      identifier: metallic
+      usageName: metallic
+      channelStr: metallic
+      label: Metallic
+      usage: 34
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    - outputName: height
+      identifier: height
+      usageName: height
+      channelStr: height
+      label: Height
+      usage: 9
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    - outputName: ambientOcclusion
+      identifier: ambientOcclusion
+      usageName: ambientOcclusion
+      channelStr: ambientOcclusion
+      label: ambientOcclusion
+      usage: 5
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
+    texturePackingList:
+    - targetName: baseColor
+      components:
+      - sourceName: source
+        from: 0
+        to: 3
+    - targetName: normal
+      components:
+      - sourceName: source
+        from: 0
+        to: 3
+    - targetName: roughness
+      components:
+      - sourceName: roughness
+        from: 0
+        to: 3
+    - targetName: metallic
+      components:
+      - sourceName: roughness
+        from: 0
+        to: 3
+    - targetName: height
+      components:
+      - sourceName: source
+        from: 0
+        to: 3
+    - targetName: ambientOcclusion
+      components:
+      - sourceName: source
+        from: 0
+        to: 3
+    textureParameters:
+    - textureName: Stonish - baseColor
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Stonish - normal
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Stonish - roughness
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Stonish - metallic
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Stonish - height
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Stonish - ambientOcclusion
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    colorSpaceList: []
+    inputTextureMap: []
+    targetSettingList:
+    - label: Default
+      bOverride: 0
+      bLockRatio: 1
+      textureWidth: 512
+      textureHeight: 512
+      textureFormatMode: 0
+      normalCompressed: 0
+      bGenerateOnLoad: 1
+    - label: Default
+      bOverride: 0
+      bLockRatio: 1
+      textureWidth: 512
+      textureHeight: 512
+      textureFormatMode: 0
+      normalCompressed: 0
+      bGenerateOnLoad: 1
+    material: {fileID: -3390720635581218074, guid: d5ff25ea264964fb8bac4f6ba74c6a21,
+      type: 3}
+    generatedTextures:
+    - {fileID: -2851718534202841992, guid: d5ff25ea264964fb8bac4f6ba74c6a21, type: 3}
+    - {fileID: 1261465745171507268, guid: d5ff25ea264964fb8bac4f6ba74c6a21, type: 3}
+    - {fileID: 6675541185633892891, guid: d5ff25ea264964fb8bac4f6ba74c6a21, type: 3}
+    - {fileID: 7966747799422688767, guid: d5ff25ea264964fb8bac4f6ba74c6a21, type: 3}
+    - {fileID: -6275554753608997612, guid: d5ff25ea264964fb8bac4f6ba74c6a21, type: 3}
