@@ -775,7 +775,7 @@ ScriptedImporter:
       - name: _EnergyConservingSpecularColor
         float: 1
       - name: _HeightAmplitude
-        float: 20
+        float: 3
       - name: _HeightCenter
         float: 0.5
       - name: _HeightMapParametrization
@@ -789,7 +789,7 @@ ScriptedImporter:
       - name: _HeightPoMAmplitude
         float: 2
       - name: _HeightTessAmplitude
-        float: 2000
+        float: 300
       - name: _HeightTessCenter
         float: 0.5
       - name: _InvTilingScale
@@ -875,7 +875,7 @@ ScriptedImporter:
       - name: _TessellationFactorMinDistance
         float: 50
       - name: _TessellationFactorTriangleSize
-        float: 5
+        float: 1
       - name: _TessellationMode
         float: 1
       - name: _TessellationShapeFactor
@@ -911,7 +911,7 @@ ScriptedImporter:
       - name: _UVEmissive
         float: 0
       - name: _UseEmissiveIntensity
-        float: 0
+        float: 1
       - name: _UseShadowThreshold
         float: 0
       - name: _ZTestDepthEqualForOpaque
