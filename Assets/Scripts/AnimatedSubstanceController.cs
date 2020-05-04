@@ -8,12 +8,13 @@ public class AnimatedSubstanceController : MonoBehaviour
     // adapted from the example Substance Unity API script found here:
     // https://docs.substance3d.com/integrations/c-example-script-170459665.html
 
-    public PlainManager plainManager;
+    private PlainManager plainManager;
     public Substance.Game.SubstanceGraph plainSubstance;
 
     // Start is called before the first frame update
     void Start()
     {
+        plainManager = GameObject.Find("PlainManager").GetComponent<PlainManager>();
         UpdateSubstance();
     }
 
