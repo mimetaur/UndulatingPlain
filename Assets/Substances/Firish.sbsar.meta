@@ -570,7 +570,8 @@ ScriptedImporter:
     graphDescIndex: 0
     generateAllOutputs: 0
     generateMipMaps: 1
-    preset: " <sbspreset pkgurl=\"pkg://Firish\" label=\"\" >\n </sbspreset>\n"
+    preset: " <sbspreset pkgurl=\"pkg://Firish\" label=\"\" >\n  <presetinput identifier=\"$outputsize\"
+      uid=\"189932614\" type=\"8\" value=\"12,12\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
@@ -1099,19 +1100,11 @@ ScriptedImporter:
     - label: Default
       bOverride: 0
       bLockRatio: 1
-      textureWidth: 512
-      textureHeight: 512
+      textureWidth: 4096
+      textureHeight: 4096
       textureFormatMode: 0
       normalCompressed: 0
       bGenerateOnLoad: 1
-    - label: Default
-      bOverride: 0
-      bLockRatio: 1
-      textureWidth: 512
-      textureHeight: 512
-      textureFormatMode: 0
-      normalCompressed: 0
-      bGenerateOnLoad: 0
     material: {fileID: 4290785186926590032, guid: 19a27871b858d4dab87a90f5b47d1b46,
       type: 3}
     generatedTextures:
@@ -1124,7 +1117,8 @@ ScriptedImporter:
     graphDescIndex: 0
     generateAllOutputs: 0
     generateMipMaps: 1
-    preset: " <sbspreset pkgurl=\"pkg://Firish\" label=\"\" >\n </sbspreset>\n"
+    preset: " <sbspreset pkgurl=\"pkg://Firish\" label=\"\" >\n  <presetinput identifier=\"$outputsize\"
+      uid=\"189932614\" type=\"8\" value=\"11,11\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
@@ -1654,8 +1648,8 @@ ScriptedImporter:
     - label: Default
       bOverride: 0
       bLockRatio: 1
-      textureWidth: 4096
-      textureHeight: 4096
+      textureWidth: 2048
+      textureHeight: 2048
       textureFormatMode: 0
       normalCompressed: 0
       bGenerateOnLoad: 1
