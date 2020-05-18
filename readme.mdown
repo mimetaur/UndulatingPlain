@@ -1,5 +1,7 @@
 **Undulating Plain** (2018)
 
-Live audiovisual simulation created for the LOOPS festival at VSW in Rochester, NY. [Watch on Vimeo](https://vimeo.com/415267846).
+[![Undulating Plain](thumbnail.jpg)](https://vimeo.com/415267846)
+
+Live audiovisual simulation created for the LOOPS festival at VSW in Rochester, NY.
 
 One of a series of long-running audiovisual installation works I created in Unity. Remastered in 2020 using the high-definition render pipeline.
