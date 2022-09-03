@@ -21,7 +21,8 @@ ScriptedImporter:
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
       shaderKeywords: _BASECOLORMAP _DISPLACEMENT_LOCK_TILING_SCALE _HEIGHTMAP _MASKMAP
-        _NORMALMAP _NORMALMAP_TANGENT_SPACE _TESSELLATION_DISPLACEMENT _VERTEX_DISPLACEMENT_LOCK_OBJECT_SCALE
+        _METALLICGLOSSMAP _NORMALMAP _NORMALMAP_TANGENT_SPACE _OCCLUSIONMAP _ROUGHNESSMAP
+        _TESSELLATION_DISPLACEMENT _VERTEX_DISPLACEMENT_LOCK_OBJECT_SCALE
       lightmapFlags: 4
       enableInstancingVariants: 0
       doubleSidedGI: 0
@@ -256,8 +257,12 @@ ScriptedImporter:
         float: 1
       - name: _PPDPrimitiveWidth
         float: 1
+      - name: _RayTracing
+        float: 0
       - name: _ReceivesSSR
         float: 1
+      - name: _ReceivesSSRTransparent
+        float: 0
       - name: _RefractionModel
         float: 0
       - name: _Smoothness
@@ -315,8 +320,6 @@ ScriptedImporter:
       - name: _TexWorldScaleEmissive
         float: 1
       - name: _Thickness
-        float: 1
-      - name: _ThicknessMultiplier
         float: 1
       - name: _TransmissionEnable
         float: 1
@@ -559,8 +562,8 @@ ScriptedImporter:
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
       shaderKeywords: _BASECOLORMAP _DISPLACEMENT_LOCK_TILING_SCALE _HEIGHTMAP _MASKMAP
-        _NORMALMAP _NORMALMAP_TANGENT_SPACE _TESSELLATION_DISPLACEMENT _TESSELLATION_PHONG
-        _VERTEX_DISPLACEMENT_LOCK_OBJECT_SCALE
+        _METALLICGLOSSMAP _NORMALMAP _NORMALMAP_TANGENT_SPACE _OCCLUSIONMAP _ROUGHNESSMAP
+        _TESSELLATION_DISPLACEMENT _TESSELLATION_PHONG _VERTEX_DISPLACEMENT_LOCK_OBJECT_SCALE
       lightmapFlags: 4
       enableInstancingVariants: 0
       doubleSidedGI: 0
@@ -795,8 +798,12 @@ ScriptedImporter:
         float: 1
       - name: _PPDPrimitiveWidth
         float: 1
+      - name: _RayTracing
+        float: 0
       - name: _ReceivesSSR
         float: 1
+      - name: _ReceivesSSRTransparent
+        float: 0
       - name: _RefractionModel
         float: 0
       - name: _Smoothness
@@ -854,8 +861,6 @@ ScriptedImporter:
       - name: _TexWorldScaleEmissive
         float: 1
       - name: _Thickness
-        float: 1
-      - name: _ThicknessMultiplier
         float: 1
       - name: _TransmissionEnable
         float: 1
@@ -1090,7 +1095,8 @@ ScriptedImporter:
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
       shaderKeywords: _BASECOLORMAP _DISPLACEMENT_LOCK_TILING_SCALE _HEIGHTMAP _MASKMAP
-        _NORMALMAP _NORMALMAP_TANGENT_SPACE _TESSELLATION_DISPLACEMENT _VERTEX_DISPLACEMENT_LOCK_OBJECT_SCALE
+        _METALLICGLOSSMAP _NORMALMAP _NORMALMAP_TANGENT_SPACE _OCCLUSIONMAP _ROUGHNESSMAP
+        _TESSELLATION_DISPLACEMENT _VERTEX_DISPLACEMENT_LOCK_OBJECT_SCALE
       lightmapFlags: 4
       enableInstancingVariants: 0
       doubleSidedGI: 0
@@ -1325,8 +1331,12 @@ ScriptedImporter:
         float: 1
       - name: _PPDPrimitiveWidth
         float: 1
+      - name: _RayTracing
+        float: 0
       - name: _ReceivesSSR
         float: 1
+      - name: _ReceivesSSRTransparent
+        float: 0
       - name: _RefractionModel
         float: 0
       - name: _Smoothness
@@ -1384,8 +1394,6 @@ ScriptedImporter:
       - name: _TexWorldScaleEmissive
         float: 1
       - name: _Thickness
-        float: 1
-      - name: _ThicknessMultiplier
         float: 1
       - name: _TransmissionEnable
         float: 1
